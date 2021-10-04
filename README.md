@@ -1,1 +1,4 @@
-# minesweeper
+ejecutar:
+yarn 
+
+yarn start 

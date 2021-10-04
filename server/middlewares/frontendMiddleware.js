@@ -1,0 +1,22 @@
+/* eslint-disable global-require */
+
+/**
+ * Front-end middleware
+ */
+
+const env = require("dotenv").config();
+
+module.exports = (app, options) => {
+  const isProd = env.NODE_ENV === "production";
+
+  if (isProd) {
+    const addProdMiddlewares = require("./addProdMiddlewares");
+    addProdMiddlewares(app, options);
+  } else {
+    const webpackConfig = require("../../config/webpack.dev.babel");
+    const addDevMiddlewares = require("./addDevMiddlewares");
+    addDevMiddlewares(app, webpackConfig);
+  }
+
+  return app;
+};

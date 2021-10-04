@@ -1,0 +1,8 @@
+{
+  "passwordsDontMatch": "Las contraseñas no coinciden",
+  "shortPassword": "La contraseña debe contener mínimo 8 caracteres ",
+  "invalidUrl": "La url no es válida",
+  "invalidEmail": "El email no es válido",
+  "requiredField":  "El campo es requerido",
+  "requiredArray": "Debe haber como mínimo un elemento agregado"
+}
